@@ -3,6 +3,8 @@
 
 #include "qsfmlcanvas.h"
 
+#define DEGREES_PER_SECOND (180)
+
 class MyCanvas : public QSFMLCanvas
 {
 public :
@@ -23,6 +25,7 @@ private :
         // Setup the sprite
         mySprite.setTexture(myTexture);
         mySprite.setOrigin(myTexture.getSize().x / 2.0, myTexture.getSize().y / 2.0);
+        mySprite.setPosition(myTexture.getSize().x / 2.0, myTexture.getSize().y / 2.0);
     }
 
     void OnUpdate()
@@ -30,8 +33,13 @@ private :
         // Clear screen
         clear(sf::Color(128, 0, 0));
 
+        sf::Time time = myClock.getElapsedTime();
+        myClock.restart();
+
+        auto rotation = time.asSeconds() * DEGREES_PER_SECOND;
+
         // Rotate the sprite
-        mySprite.rotate(1);
+        mySprite.rotate(rotation);
 
         // Draw it
         draw(mySprite);
@@ -39,6 +47,7 @@ private :
 
     sf::Sprite mySprite;
     sf::Texture myTexture;
+    sf::Clock myClock;
 };
 
 #endif // MYCANVAS_H
