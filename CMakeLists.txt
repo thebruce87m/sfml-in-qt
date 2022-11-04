@@ -35,7 +35,6 @@ set(PROJECT_SOURCES
         qsfmlcanvas.h
         qsfmlcanvas.cpp
         mycanvas.h
-        mycanvas.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
