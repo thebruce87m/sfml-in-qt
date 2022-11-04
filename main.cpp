@@ -8,9 +8,6 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-//    QtSFML w;
-//    w.show();
-
     // Create the main frame
     QFrame* MainFrame = new QFrame;
     MainFrame->setWindowTitle("Qt SFML");

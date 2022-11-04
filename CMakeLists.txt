@@ -29,9 +29,6 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
 set(PROJECT_SOURCES
         main.cpp
-        qtsfml.cpp
-        qtsfml.h
-        qtsfml.ui
         qsfmlcanvas.h
         qsfmlcanvas.cpp
         mycanvas.h
