@@ -1,5 +1,3 @@
-#include "qtsfml.h"
-
 #include <QApplication>
 #include <QFrame>
 #include "mycanvas.h"
