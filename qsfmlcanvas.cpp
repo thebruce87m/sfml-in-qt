@@ -30,16 +30,6 @@ QSFMLCanvas::~QSFMLCanvas()
 
 }
 
-void QSFMLCanvas::OnInit()
-{
-
-}
-
-void QSFMLCanvas::OnUpdate()
-{
-
-}
-
 void QSFMLCanvas::showEvent(QShowEvent*)
 {
     if (!myInitialized)

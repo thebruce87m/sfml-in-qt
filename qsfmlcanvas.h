@@ -16,9 +16,9 @@ public:
 
 private :
 
-    virtual void OnInit();
+    virtual void OnInit() = 0;
 
-    virtual void OnUpdate();
+    virtual void OnUpdate() = 0;
 
     virtual QPaintEngine* paintEngine() const;
 
